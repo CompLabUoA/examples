@@ -114,7 +114,7 @@ def main():
             print('Episode {}\tLast reward: {:.2f}\tAverage reward: {:.2f}'.format(
                   i_episode, ep_reward, running_reward))
         #if running_reward > env.spec.reward_threshold: #typically 475 for cartpole-v1, smoothed reward
-        if ep_reward > 50: #option in which a manual reward threshold is set for any given episode
+        if ep_reward > 250: #option in which a manual reward threshold is set for any given episode
             print("Solved! Running reward is now {} and "
                   "the last episode runs to {} time steps!".format(running_reward, t))
             break
