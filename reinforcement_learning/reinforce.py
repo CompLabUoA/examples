@@ -23,7 +23,8 @@ parser.add_argument('--log-interval', type=int, default=10, metavar='N',
 args = parser.parse_args()
 
 
-env = gym.make("CartPole-v1", render_mode="human")
+# env = gym.make("CartPole-v1", render_mode="human")
+env = gym.make("Acrobot-v1", render_mode="human")
 env.reset(seed=args.seed) #set seed of the env
 torch.manual_seed(args.seed) #set seed of the torch
 
@@ -36,9 +37,9 @@ class Policy(nn.Module):
         
         """
         super(Policy, self).__init__()
-        self.affine1 = nn.Linear(4, 128) #linear layer taking (4,) input and outputting (128,) output
+        self.affine1 = nn.Linear(6, 128) #linear layer taking (4,) input and outputting (128,) output
         self.dropout = nn.Dropout(p=0.6) #dropout 60% of the neurons
-        self.affine2 = nn.Linear(128, 2) #linear layer taking (128,) input and outputting (2,) output such that 0 = L, 1 = R
+        self.affine2 = nn.Linear(128, 3) #linear layer taking (128,) input and outputting (2,) output such that 0 = L, 1 = R
 
         self.saved_log_probs = [] #list to save log probabilities of actions
         self.rewards = [] #list to save rewards
