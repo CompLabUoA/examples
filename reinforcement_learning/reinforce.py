@@ -9,9 +9,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.distributions import Categorical
 
-#to show window with live render run (will run slower than without render): 
-#python reinforce.py  --render
-
+# to show window with live render run (will run slower than without render): 
+# python reinforce.py  --render
 parser = argparse.ArgumentParser(description='PyTorch REINFORCE example')
 parser.add_argument('--gamma', type=float, default=0.99, metavar='G',
                     help='discount factor (default: 0.99)')
