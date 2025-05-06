@@ -100,7 +100,7 @@ def main():
     for i_episode in count(1): #can change this to e.g. range(1, 100) to limit to 100 episodes (attempts) while learning. 
         state, _ = env.reset()
         ep_reward = 0
-        for t in range(1, 10000):  # Don't infinite loop while learning, this is how long it can run each 'episode' (attempt) before it ends. 
+        for t in range(1, 100):  # Don't infinite loop while learning, this is how long it can run each 'episode' (attempt) before it ends. 
             action = select_action(state)
             state, reward, done, _, _ = env.step(action)
             if args.render:
