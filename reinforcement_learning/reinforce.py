@@ -129,3 +129,4 @@ if __name__ == '__main__':
 #python reinforce.py  --render
 
 #comment to initiate gene's branch
+#gene testing 12:27
