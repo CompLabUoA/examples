@@ -9,6 +9,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.distributions import Categorical
 
+#to show window with live render run (will run slower than without render): 
+#python reinforce.py  --render
 
 parser = argparse.ArgumentParser(description='PyTorch REINFORCE example')
 parser.add_argument('--gamma', type=float, default=0.99, metavar='G',
@@ -122,9 +124,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-#to show window with live render run (will run slower than without render): 
-#python reinforce.py  --render
-
-#comment to initiate gene's branch
-#gene testing 12:27
